@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    </style>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../style/styling.css">
+    <body>
+        
+        
+<div class="container">
+
+    <div class="main justify-content-center ">
+    <div class="row justify-content-center">
+      <div class="col-4 b">
+        <form id="symptom-form">
+          <label for="symptom">Enter or choose a symptom:</label>
+          <select id="symptom" name="symptom" list="symptom-list" class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option disabled selected>--select symptom--</option>
+          </select>
+          <!-- <datalist id="symptom-list">
+          </datalist> -->
+        </form>
+      
+
+<br>
+       
+        <button onclick="addSymptom()" class="button button_primary a1" id="add">Add</button>
+        <button class="button button_danger a3" id="rem">Delete</button>
+        <button onclick="clearAll()" class="button button_danger a2" >Clear</button>
+      </div>
+
+    <div class="col-4 a " style="height: 100px; overflow-y: scroll;">
+      <ul id="myList" class="ullist">
+      </ul>
+    </div>
+    
+    <button class="button button_primary btn-grad" id = "summary-button" onclick="showSummary()">Predict Now!</button>
+    </div>
+  </div>
+
+  <div class="get" style="background-color: rgb(255, 255, 255); width: 80%; margin-left: auto; margin-right: auto;">
+   
+    <section class="text-gray-600 body-font" >
+        <div class="container px-5 py-16 mx-auto">
+          <div class="flex flex-col text-center w-full mb-10">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Disease Predicted by Algortihms</h1>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 md:w-1/3 ">
+              <div class="flex rounded-lg h-full  p-8 flex-col" style="background-color: #FAACA8;
+              background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+              ">
+                <div class="flex items-center mb-3">
+                  
+                  <h2 class="text-gray-900 text-3xl title-font font-medium">Rank 1<hr></h2>
+                  
+                </div>
+                <div class="flex-grow">
+                  
+                  <h2 id = "id1" style="color: white; "></h2>
+                  <!-- <a class="mt-3 text-blue-500 inline-flex items-center">Learn More
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a> -->
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col" style="background-color: #8BC6EC;
+              background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+              ">
+                <div class="flex items-center mb-3">
+                  
+                  <h2 class="text-gray-900 text-3xl title-font font-medium">Rank 2<hr></h2>
+                </div>
+                <div class="flex-grow">
+                  <h2 id = "id2" style="color: white;"></h2>
+                  <!-- <a class="mt-3 text-blue-500 inline-flex items-center">Learn More
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a> -->
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col" style="background-image: linear-gradient( 103.3deg,  rgba(252,225,208,1) 30%, rgba(255,173,214,1) 55.7%, rgba(162,186,245,1) 81.8% );box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+                <div class="flex items-center mb-3">
+                  
+                  <h2 class="text-gray-900 text-3xl title-font font-medium">Rank 3<hr></h2>
+                </div>
+                <div class="flex-grow">
+                  <h2 id = "id3" style="color: white;"></h2>
+                  <!-- <a class="mt-3 text-blue-500 inline-flex items-center">Learn More
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+</div>
+<script src="../script/script.js"></script>
+</body>
+</html>
